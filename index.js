@@ -36,4 +36,4 @@ client.on('message', async (msg) => {
     else if(cmd === "종료") stopRepeat(msg)
 })
 
-client.login('ODExMTc5MDc2NTk2NjYyMjgy.YCubYg.i1XFug2gyZMV-kMXKZEqmNYJ2vo')
+client.login('ODExMTc5MDc2NTk2NjYyMjgy.YCubYg.YV0x9COcEBU28D93FcvqzHVQ1NY')
