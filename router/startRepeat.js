@@ -5,6 +5,8 @@ module.exports = (msg) => {
     let {dataes} = JSON.parse(fs.readFileSync(path, 'utf8'))
 
     const date = new Date()
+    const year = date.getFullYear()
+    const month = date.getMonth() + 1
     const day = date.getDate()
     const hour = date.getHours()
     const minutes = date.getMinutes()
@@ -15,7 +17,7 @@ module.exports = (msg) => {
 
     dataes.push({
         userId: msg.author.id,
-        time: `${day} / ${hour} : ${minutes}`,
+        time: `${year}-${month}-${day} | ${hour} : ${minutes}`,
         count: 0,
         message: msg.content.slice(4),
         channel: msg.channel
