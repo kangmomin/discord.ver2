@@ -11,9 +11,9 @@ module.exports = (msg) => {
     const hour = date.getHours()
     const minutes = date.getMinutes()
     
-    for (data of dataes) {
-        if(msg.author.id === data.userId) return msg.channel.send("이미 반복작업을 실행 중입니다.")
-    } //해당 유저가 반복을 실행했는가?
+    // for (data of dataes) {
+    //     if(msg.author.id === data.userId) return msg.channel.send("이미 반복작업을 실행 중입니다.")
+    // } //해당 유저가 반복을 실행했는가?
 
     dataes.push({
         userId: msg.author.id,
