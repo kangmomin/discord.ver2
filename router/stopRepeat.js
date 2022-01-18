@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 module.exports = (msg) => {
-    const path = 'F:/files/node.js/discord-ver.2/public/repeatData.json'
+    const path = 'public/repeatData.json'
     let {dataes} = JSON.parse(fs.readFileSync(path, 'utf8'))
     const id = Number(msg.content.slice(4))
 

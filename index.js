@@ -1,6 +1,8 @@
+const { Client, Intents } = require('discord.js');
 const Discord = require('discord.js')
-const client = new Discord.Client()
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const fs = require('fs')
+
 
 const startRepeat = require('./router/startRepeat')
 const stopRepeat = require('./router/stopRepeat')
@@ -10,7 +12,7 @@ client.on('ready', () => {
 })
 
 setTimeout(() => {
-    const path = 'F:/files/node.js/discord-ver.2/public/repeatData.json'
+    const path = 'public/repeatData.json'
     setInterval(() => {
         let {dataes} = JSON.parse(fs.readFileSync(path, 'utf8'))
         
@@ -36,4 +38,4 @@ client.on('message', async (msg) => {
     else if(cmd === "종료") stopRepeat(msg)
 })
 
-client.login('ODExMTc5MDc2NTk2NjYyMjgy.YCubYg.YV0x9COcEBU28D93FcvqzHVQ1NY')
+client.login('ODExMTc5MDc2NTk2NjYyMjgy.YCubYg.zFrM00sh33IeS3L2aFJgD4Ut-jQ')
