@@ -1,6 +1,5 @@
-const { Client, Intents } = require('discord.js');
-const Discord = require('discord.js')
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const { Client, Intents } = require('discord.js')
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] })
 const fs = require('fs')
 
 
@@ -38,4 +37,6 @@ client.on('message', async (msg) => {
     else if(cmd === "종료") stopRepeat(msg)
 })
 
-client.login('ODExMTc5MDc2NTk2NjYyMjgy.YCubYg.zFrM00sh33IeS3L2aFJgD4Ut-jQ')
+client.user.setActivity('$반복 [메시지] / $종료 [id]', { type: 'WATCHING' })
+
+client.login('ODExMTc5MDc2NTk2NjYyMjgy.YCubYg.ME6fkQZlw1em8kf0iUXEY857nHM')
