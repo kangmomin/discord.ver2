@@ -7,6 +7,7 @@ const startRepeat = require('./router/startRepeat')
 const stopRepeat = require('./router/stopRepeat')
 
 client.on('ready', () => {
+    client.user.setActivity('$반복 [메시지] / $종료 [id]', { type: 'WATCHING' })
     console.log(`Logged in as ${client.user.tag}`)
 })
 
@@ -37,6 +38,5 @@ client.on('message', async (msg) => {
     else if(cmd === "종료") stopRepeat(msg)
 })
 
-client.user.setActivity('$반복 [메시지] / $종료 [id]', { type: 'WATCHING' })
 
-client.login('ODExMTc5MDc2NTk2NjYyMjgy.YCubYg.ME6fkQZlw1em8kf0iUXEY857nHM')
+client.login('ODExMTc5MDc2NTk2NjYyMjgy.YCubYg.q9KI5NmcrnSnxAXIkSF_bIc_sv4')
